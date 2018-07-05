@@ -1,3 +1,5 @@
+# WARNING: THIS EXTENSION IS STILL ON IMPLEMENTATION
+
 # jira-worklog README
 
 This is the README for your extension "jira-worklog". After writing up a brief description, we recommend including the following sections.
