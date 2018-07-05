@@ -1,6 +1,6 @@
 'use strict';
 import * as vscode from 'vscode';
-import {jira} from './modules/jira';
+import { jira } from './modules/jira';
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -8,7 +8,7 @@ export function activate(context: vscode.ExtensionContext) {
     const CANCEL = 'Not now';
 
     vscode.window.showInformationMessage('Hello, Let\'s Log Some Work!!!', 'Sure', 'Not Now').then(state => {
-        switch(state) {
+        switch (state) {
             case OK:
                 jira.startWorkLog();
                 break;
@@ -18,8 +18,8 @@ export function activate(context: vscode.ExtensionContext) {
         }
     });
 
-    let disposable = vscode.commands.registerCommand('extension.sayHello', () => {
-        vscode.window.showInformationMessage('Hello World!');
+    let disposable = vscode.commands.registerCommand('extension.startWorkLog', () => {
+        jira.startWorkLog();
     });
 
     context.subscriptions.push(disposable);
